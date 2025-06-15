@@ -1,0 +1,54 @@
+2025-06-13 19:26:26.501 [main] INFO  c.i.permissionservice.PermissionServiceApplication - Starting PermissionServiceApplication using Java 1.8.0_202 on XIAOQI-199 with PID 34124 (D:\Java\com\itxiaoqi\permission-service\target\classes started by lenovo in D:\Java\com\itxiaoqi\permission-service)
+2025-06-13 19:26:26.503 [main] INFO  c.i.permissionservice.PermissionServiceApplication - The following 1 profile is active: "dev"
+2025-06-13 19:26:27.030 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=edaeeff8-42f0-34b4-aefa-dcdba614effa
+2025-06-13 19:26:27.230 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-06-13 19:26:27.231 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.38] using APR version [1.7.4].
+2025-06-13 19:26:27.232 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-13 19:26:27.232 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-13 19:26:27.234 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1v  1 Aug 2023]
+2025-06-13 19:26:27.239 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 19:26:27.240 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 19:26:27.240 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-06-13 19:26:27.382 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 19:26:27.382 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 852 ms
+2025-06-13 19:26:28.029 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-06-13 19:26:28.132 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-06-13 19:26:29.093 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 19:26:29.105 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-13 19:26:29.117 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP user-service 10.157.27.176:8080 register finished
+2025-06-13 19:26:29.440 [main] INFO  c.i.permissionservice.PermissionServiceApplication - Started PermissionServiceApplication in 3.625 seconds (JVM running for 4.292)
+2025-06-13 19:26:53.872 [Thread-15] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-06-13 19:26:53.873 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-06-13 19:26:53.874 [Thread-15] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-06-13 19:26:53.877 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-06-13 19:26:54.091 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-06-13 19:26:54.092 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-06-13 19:26:54.093 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-06-13 19:26:54.097 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-06-13 19:27:04.929 [main] INFO  c.i.permissionservice.PermissionServiceApplication - Starting PermissionServiceApplication using Java 1.8.0_202 on XIAOQI-199 with PID 35352 (D:\Java\com\itxiaoqi\permission-service\target\classes started by lenovo in D:\Java\com\itxiaoqi\permission-service)
+2025-06-13 19:27:04.931 [main] INFO  c.i.permissionservice.PermissionServiceApplication - The following 1 profile is active: "dev"
+2025-06-13 19:27:05.581 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=edaeeff8-42f0-34b4-aefa-dcdba614effa
+2025-06-13 19:27:05.831 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-06-13 19:27:05.832 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.38] using APR version [1.7.4].
+2025-06-13 19:27:05.832 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2025-06-13 19:27:05.832 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-06-13 19:27:05.834 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1v  1 Aug 2023]
+2025-06-13 19:27:05.841 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-06-13 19:27:05.841 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 19:27:05.842 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-06-13 19:27:05.990 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 19:27:05.990 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1022 ms
+2025-06-13 19:27:06.697 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-06-13 19:27:06.821 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-06-13 19:27:07.849 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-06-13 19:27:07.864 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-06-13 19:27:07.875 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP permission-service 10.157.27.176:8081 register finished
+2025-06-13 19:27:08.203 [main] INFO  c.i.permissionservice.PermissionServiceApplication - Started PermissionServiceApplication in 4.23 seconds (JVM running for 5.093)
+2025-06-13 19:27:20.828 [Thread-17] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-06-13 19:27:20.829 [Thread-11] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-06-13 19:27:20.829 [Thread-17] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-06-13 19:27:20.830 [Thread-11] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-06-13 19:27:21.635 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-06-13 19:27:21.639 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-06-13 19:27:21.640 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-06-13 19:27:21.647 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
