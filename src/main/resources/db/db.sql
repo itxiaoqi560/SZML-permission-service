@@ -5,7 +5,7 @@ USE permission;
 -- 角色表
 CREATE TABLE IF NOT EXISTS tb_role
 (
-    id        BIGINT UNSIGNED PRIMARY KEY COMMENT '角色id', -- 1:超管 2:普通用户 3:管理员
+    id        BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '角色id', -- 1:超管 2:普通用户 3:管理员
     role_code VARCHAR(20) NOT NULL UNIQUE COMMENT '角色标识'-- super_admin/user/admin
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 1
@@ -46,6 +46,5 @@ CREATE TABLE IF NOT EXISTS `undo_log`
     PRIMARY KEY (`id`),
     UNIQUE KEY `ux_undo_log` (`xid`, `branch_id`)
 ) ENGINE = InnoDB
-  AUTO_INCREMENT = 1
   DEFAULT CHARSET = utf8mb4
     COMMENT = '回滚日志';

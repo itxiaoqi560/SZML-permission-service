@@ -17,7 +17,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 @Aspect
@@ -25,8 +24,6 @@ import java.util.Objects;
 public class LoggingAspect {
     @Resource
     private RabbitTemplate rabbitTemplate;
-    @Resource
-    private UserRoleMapper userRoleMapper;
 
     @Pointcut("@annotation(com.itxiaoqi.permissionservice.anno.Loggable)")
     public void logPointcut() {}
@@ -38,36 +35,25 @@ public class LoggingAspect {
         String params= JSONUtil.toJsonStr(joinPoint.getArgs());
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         String operation = signature.getMethod().getAnnotation(Loggable.class).value();
-        Long operatorId=Long.parseLong(joinPoint.getArgs()[0].toString());
-        Long userId=Long.parseLong(joinPoint.getArgs()[1].toString());
         OperationLog operationLog = OperationLog.builder()
-                .operatorId(operatorId)
+                .operatorId(null)
                 .operation(operation)
                 .ip(ip)
                 .requestParams(params)
                 .createTime(LocalDateTime.now())
                 .build();
         try {
-            boolean flag = signature.getMethod().getAnnotation(Loggable.class).flag();
-            Map<String,Object> mp=new HashMap<>();
-            if(flag){
-                mp.put("old",userRoleMapper.selectById(userId));
-            }
             Object result = joinPoint.proceed();
-            if(flag){
-                mp.put("new",userRoleMapper.selectById(userId));
-            }
-            saveLog(operationLog,true,mp.toString(),"");
+            saveLog(operationLog,true,"");
             return result;
         } catch (Exception e) {
-            saveLog(operationLog,false,"",e.getMessage());
+            saveLog(operationLog,false,e.getMessage());
             throw e;
         }
     }
 
-    private void saveLog(OperationLog operationLog,Boolean operationStatus,String detail,String errorMessage){
+    private void saveLog(OperationLog operationLog,Boolean operationStatus,String errorMessage){
         operationLog.setOperationStatus(operationStatus);
-        operationLog.setDetail(detail);
         operationLog.setErrorMessage(errorMessage);
         rabbitTemplate.convertAndSend(Constant.LOGGING_EXCHANGE,
                 Constant.LOGGING_ROUTING,

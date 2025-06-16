@@ -34,6 +34,8 @@ spring:
     password: 1w34567890A
 
 seata:
+  enabled: true
+  enable-auto-data-source-proxy: false
   registry:
     type: nacos
     nacos:
@@ -60,6 +62,7 @@ logging:
   level:
     org.springframework.jdbc.support.JdbcTransactionManager: info
     com.itxiaoqi: info
+#    io.seata: debug
   pattern:
     dateformat: yyyy-MM-dd HH:mm:ss
   config: classpath:log/logback.xml # 日志配置文件
