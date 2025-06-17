@@ -6,13 +6,13 @@ public interface PermissionService{
      * 超管调用：降级用户为普通角色
      * @param userId 用户id
      */
-    void downgradeToUser(Long userId);
+    int downgradeToUser(Long userId);
 
     /**
      * 超管调用：升级用户为管理员
      * @param userId 用户id
      */
-    void upgradeToAdmin(Long userId);
+    int upgradeToAdmin(Long userId);
 
     /**
      * 查询用户角色码

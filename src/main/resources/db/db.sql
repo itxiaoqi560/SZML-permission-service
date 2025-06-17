@@ -5,8 +5,8 @@ USE permission;
 -- 角色表
 CREATE TABLE IF NOT EXISTS tb_role
 (
-    id        BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '角色id', -- 1:超管 2:普通用户 3:管理员
-    role_code VARCHAR(20) NOT NULL UNIQUE COMMENT '角色标识'-- super_admin/user/admin
+    id        BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '角色id',
+    role_code VARCHAR(20) NOT NULL UNIQUE COMMENT '角色标识'
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 1
   DEFAULT CHARSET = utf8mb4

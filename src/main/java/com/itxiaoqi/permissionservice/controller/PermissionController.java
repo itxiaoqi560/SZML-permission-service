@@ -47,9 +47,9 @@ public class PermissionController {
      */
     @PutMapping("/upgradeToAdmin")
     @Loggable(value = "超管调用：升级用户为管理员")
-    public void upgradeToAdmin(@RequestParam Long userId) {
+    public int upgradeToAdmin(@RequestParam Long userId) {
         log.info("超管调用：升级用户为管理员：{}", userId);
-        permissionService.upgradeToAdmin(userId);
+        return permissionService.upgradeToAdmin(userId);
     }
 
     /**
@@ -59,8 +59,8 @@ public class PermissionController {
      */
     @PutMapping("/downgradeToUser")
     @Loggable(value = "超管调用：降级用户为普通角色")
-    public void downgradeToUser(@RequestParam Long userId) {
+    public int downgradeToUser(@RequestParam Long userId) {
         log.info("超管调用：降级用户为普通角色：{}", userId);
-        permissionService.downgradeToUser(userId);
+        return permissionService.downgradeToUser(userId);
     }
 }

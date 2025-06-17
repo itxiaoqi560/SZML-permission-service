@@ -19,13 +19,13 @@ public class PermissionServiceImpl implements PermissionService {
      * @param userId 用户id
      */
     @Override
-    public void downgradeToUser(Long userId) {
+    public int downgradeToUser(Long userId) {
         //根据用户id降级用户为普通用户，这里采用乐观锁的思想，用户当前角色为管理员才修改
         LambdaUpdateWrapper<UserRole> wrapper = new LambdaUpdateWrapper<UserRole>()
                 .eq(UserRole::getRoleId,Constant.ADMIN)
                 .eq(UserRole::getUserId,userId)
                 .set(UserRole::getRoleId,Constant.USER);
-        userRoleMapper.update(wrapper);
+        return userRoleMapper.update(wrapper);
     }
 
     /**
@@ -33,13 +33,13 @@ public class PermissionServiceImpl implements PermissionService {
      * @param userId 用户id
      */
     @Override
-    public void upgradeToAdmin(Long userId) {
+    public int upgradeToAdmin(Long userId) {
         //根据用户id升级用户为管理员，这里采用乐观锁的思想，用户当前角色为普通成员才修改
         LambdaUpdateWrapper<UserRole> wrapper = new LambdaUpdateWrapper<UserRole>()
                 .eq(UserRole::getRoleId,Constant.USER)
                 .eq(UserRole::getUserId,userId)
                 .set(UserRole::getRoleId,Constant.ADMIN);
-        userRoleMapper.update(wrapper);
+        return userRoleMapper.update(wrapper);
     }
 
     /**
